@@ -1,8 +1,8 @@
-# Google Merchandise Store — Revenue & Funnel Analysis
+# Google Merchandise Store: Revenue & Funnel Analysis
 
 Revenue and conversion analysis of the Google Merchandise Store using Google Analytics 4 (GA4) event-level data. Built to diagnose *where* revenue is being lost in the purchase funnel, confirm findings statistically, and translate them into a prioritized business recommendation.
 
-**Skills demonstrated:** SQL (BigQuery), statistical hypothesis testing, correlation analysis, funnel/cohort analysis, business communication.
+**Skills demonstrated:** SQL (BigQuery), statistical hypothesis testing, correlation analysis, funnel/cohort analysis, business recommendation.
 
 ---
 
