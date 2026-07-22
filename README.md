@@ -30,7 +30,7 @@ Leadership observed fluctuating traffic and revenue and wanted to understand use
 This analysis answers three questions:
 1. Is the revenue decline a traffic problem or a conversion problem?
 2. Where exactly in the funnel are customers dropping off?
-3. Is the decline a real, structural issue — or normal seasonal variation?
+3. Is the decline a real, structural issue or normal seasonal variation?
 
 ## Dataset
 
@@ -39,13 +39,6 @@ This analysis answers three questions:
 | **Source** | [`bigquery-public-data.ga4_obfuscated_sample_ecommerce`](https://console.cloud.google.com/bigquery) (BigQuery Public Datasets) |
 | **Company** | Google Merchandise Store (Google-branded apparel/accessories) |
 | **Date range** | November 1, 2020 – January 31, 2021 (3 months) |
-| **Grain** | One row per GA4 event (`page_view`, `session_start`, `view_item`, `add_to_cart`, `begin_checkout`, `purchase`, etc.) |
-| **Scale** | 267,116 sessions · 5,242 completed orders · $362,165 revenue |
-
-**Known data caveats**, identified and handled during analysis:
-- `transaction_id` is frequently null/unreliable on `purchase` events — revenue queries filter on `ecommerce.purchase_revenue IS NOT NULL` instead.
-- A small number of `traffic_source.medium` values appear as `(data deleted)` — a GA4 privacy redaction, excluded from channel-level conclusions.
-- One month (November) shows `add_to_cart` counts lower than `begin_checkout` counts in aggregate — flagged as a data artifact (likely a non-cart checkout path), not treated as a real >100% conversion.
 
 ## Repository Structure
 
@@ -323,19 +316,8 @@ LIMIT 20
 
 ---
 
-## How to Reproduce
 
-1. Create a free [Kaggle](https://kaggle.com) account and open a new Notebook.
-2. In the first cell, initialize the BigQuery client (Kaggle provides free access to public datasets, no billing setup required):
-   ```python
-   from google.cloud import bigquery
-   import pandas as pd
-   client = bigquery.Client()
-   ```
-3. Run any query above via `client.query(query).to_dataframe()`.
-4. For Phase 4, ensure `scipy` and `scikit-learn` are available (pre-installed on Kaggle).
-
-## Deliverables
+## Recommendations
 
 | File | Description |
 |---|---|
