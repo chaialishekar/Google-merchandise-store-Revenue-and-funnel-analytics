@@ -1,17 +1,18 @@
 <div align="center">
 
-# 📊 Google Merchandise Store: Diagnosing a Revenue Decline
+# Google Merchandise Store: Diagnosing a Revenue Decline
 
-**A data-driven investigation into declining e-commerce revenue using SQL, Python, Tableau, and product strategy.**
+*A business analytics case study using SQL, Python, Tableau, and product strategy.*
 
 [![SQL](https://img.shields.io/badge/SQL-BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white)](https://cloud.google.com/bigquery)
 [![Python](https://img.shields.io/badge/Python-pandas%20%7C%20scipy%20%7C%20sklearn-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat-square&logo=tableau&logoColor=white)](https://public.tableau.com/)
 [![Figma](https://img.shields.io/badge/Figma-Wireframes-F24E1E?style=flat-square&logo=figma&logoColor=white)](#)
 
-[Live Dashboard](#-live-dashboard) •
-[Key Findings](#-key-findings) •
-[Repository Guide](#-repository-guide)
+[Executive Summary](EXECUTIVE_SUMMARY.md) •
+[Dashboard](dashboard/) •
+[Python Analysis](python/) •
+[Statistical Methods](docs/STATISTICAL_FORMULAS.md)
 
 </div>
 
@@ -19,16 +20,11 @@
 
 # Business Problem
 
-Leadership observed declining revenue in the Google Merchandise Store despite relatively stable website traffic.
+Leadership observed declining revenue despite relatively stable website traffic.
 
-The objective of this project was to determine:
+This project investigates whether the decline was caused by traffic, conversion, customer behavior, or seasonality using Google Analytics 4 event-level data from the Google Merchandise Store.
 
-- Is revenue loss caused by fewer visitors or lower conversion?
-- Where does the purchase funnel break down?
-- Is the decline statistically significant?
-- What product improvements could increase conversions?
-
-Using Google Analytics 4 event-level data from BigQuery, this project combines SQL, statistical analysis, visualization, and product thinking to answer these questions.
+The analysis combines SQL, statistical validation, and product thinking to identify the root cause and propose a behavioral product solution.
 
 ---
 
@@ -36,34 +32,10 @@ Using Google Analytics 4 event-level data from BigQuery, this project combines S
 
 | | |
 |---|---|
-| Dataset | Google Merchandise Store (GA4 Sample) |
+| Dataset | Google Merchandise Store (GA4) |
 | Time Period | Nov 2020 – Jan 2021 |
 | Sessions | 267,116 |
 | Revenue | $362,165 |
-| Source | BigQuery Public Dataset |
-
----
-
-# Analysis Workflow
-
-```text
-GA4 Event Data
-       │
-       ▼
-SQL Funnel Analysis
-       │
-       ▼
-Customer Segmentation
-       │
-       ▼
-Statistical Validation
-       │
-       ▼
-Business Insights
-       │
-       ▼
-Product Recommendation
-```
 
 ---
 
@@ -71,98 +43,68 @@ Product Recommendation
 
 | Finding | Result |
 |---------|--------|
-| Revenue decline was conversion-driven | ✅ |
-| Largest funnel drop occurred before checkout | ✅ |
+| Revenue decline was conversion-driven | ✓ |
+| Largest funnel leak occurred before checkout | ✓ |
+| Returning users converted 5.3× better | ✓ |
 | Conversion decline was statistically significant | p = 0.00006 |
 | Desktop & Mobile followed the same seasonal trend | r = 0.81 |
-| Returning users converted 5.3× better | ✅ |
-| Paid traffic consistently underperformed organic traffic | ✅ |
+
+---
+
+# Executive Story
+
+<table>
+<tr>
+<td><img src="assets/story/01_welcome.png" width="100%"></td>
+<td><img src="assets/story/02_lone_climber.png" width="100%"></td>
+<td><img src="assets/story/03_obstacle.png" width="100%"></td>
+<td><img src="assets/story/04_investigation.png" width="100%"></td>
+</tr>
+<tr>
+<td align="center"><sub>Welcome</sub></td>
+<td align="center"><sub>The Journey Begins</sub></td>
+<td align="center"><sub>The Obstacle</sub></td>
+<td align="center"><sub>The Investigation</sub></td>
+</tr>
+<tr>
+<td><img src="assets/story/05_solution.png" width="100%"></td>
+<td><img src="assets/story/06_result.png" width="100%"></td>
+<td><img src="assets/story/07_revenue.png" width="100%"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"><sub>The Solution</sub></td>
+<td align="center"><sub>The Result</sub></td>
+<td align="center"><sub>Business Impact</sub></td>
+<td></td>
+</tr>
+</table>
 
 ---
 
 # Live Dashboard
 
-[![Dashboard Preview](dashboard/dashboard_preview.png)](https://public.tableau.com/views/G4RevenueAnalytics/Dashboard2)
-
-**Explore the interactive Tableau dashboard** to filter revenue, conversion, channel, device, and customer segments.
+*(Insert Tableau preview here)*
 
 ---
 
 # Repository Guide
 
-| Folder | Contents |
-|---------|----------|
-| `/sql` | BigQuery SQL queries used throughout the analysis |
-| `/python` | Statistical tests, forecasting, and supporting analysis |
-| `/dashboard` | Tableau workbook and dashboard preview |
-| `/product-solution` | Product proposal, wireframes, and GTM strategy |
-| `/presentations` | Executive presentation and full case study |
-| `/docs` | Methodology, assumptions, and statistical notes |
-
----
-
-# Project Structure
-
-```text
-.
-├── README.md
-├── sql/
-├── python/
-├── dashboard/
-├── product-solution/
-├── presentations/
-├── docs/
-└── assets/
-```
+| Folder | Description |
+|---------|-------------|
+| `/sql` | BigQuery SQL analysis |
+| `/python` | Statistical analysis |
+| `/dashboard` | Tableau dashboard |
+| `/product-solution` | Product proposal |
+| `/presentation` | Executive presentation |
+| `/docs` | Methodology and formulas |
 
 ---
 
 # Technologies
 
-- SQL (Google BigQuery)
-- Python (Pandas, SciPy, Scikit-learn)
+- SQL (BigQuery)
+- Python
 - Tableau
 - Figma
 - Google Analytics 4
-
----
-
-# Highlights
-
-- Diagnosed the root cause of declining revenue using event-level GA4 data
-- Built SQL funnel and customer segmentation analyses
-- Validated findings using hypothesis testing and correlation analysis
-- Developed a product recommendation supported by user behavior
-- Communicated findings through an executive dashboard and presentation
-
----
-
-# Additional Resources
-
-📊 **Dashboard**
-
-- Tableau Public Dashboard
-
-📈 **SQL Analysis**
-
-- `/sql`
-
-📉 **Statistical Analysis**
-
-- `/python`
-
-💡 **Product Proposal**
-
-- `/product-solution`
-
-📑 **Executive Presentation**
-
-- `/presentations`
-
----
-
-<div align="center">
-
-**From business problem → analytics → statistical validation → product recommendation**
-
-</div>
