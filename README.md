@@ -321,7 +321,7 @@ LIMIT 20
 
 | File | Description |
 |---|---|
-|[Full findings + GTM strategy deck (17 slides)](https://public.tableau.com/views/G4RevenueAnalytics/Dashboard2?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) |
+|[Full findings: DASHBOARD ](https://public.tableau.com/views/G4RevenueAnalytics/Dashboard2?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) |
 | `GA4_Discovery_Assistant_Proposal.pdf` | Three-part report: diagnosis → behavioral product solution → GTM strategy |
 | `GA4_Revenue_to_Solution_Overview.pptx` | Condensed 8-slide summary deck |
 
