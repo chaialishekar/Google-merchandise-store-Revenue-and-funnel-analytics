@@ -18,6 +18,7 @@ Revenue and conversion analysis of the Google Merchandise Store using Google Ana
   - [Phase 3 — Segmentation](#phase-3--segmentation)
   - [Phase 4 — Statistical Validation (Python)](#phase-4--statistical-validation-python)
   - [Phase 5 — Product-Level Analysis](#phase-5--product-level-analysis)
+  - [Phase 6 — Tableu live Dashboard](#phase-6--Tableu-Dashboard)
 - [How to Reproduce](#how-to-reproduce)
 - [Deliverables](#deliverables)
 
@@ -317,7 +318,7 @@ LIMIT 20
 ---
 
 
-## CHECK THE LIVE DASHBOARD
+## Phase 6 — Tableu Dashboard
 
 | DASHBOARD |
 |---|
