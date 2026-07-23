@@ -3,28 +3,13 @@
 # Google Merchandise Store: Diagnosing a Revenue Decline
 
 *A business analytics case study using SQL, Python, Tableau, and product strategy.*
-
-[![SQL](https://img.shields.io/badge/SQL-BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white)](https://cloud.google.com/bigquery)
-[![Python](https://img.shields.io/badge/Python-pandas%20%7C%20scipy%20%7C%20sklearn-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat-square&logo=tableau&logoColor=white)](https://public.tableau.com/)
-[![Figma](https://img.shields.io/badge/Figma-Wireframes-F24E1E?style=flat-square&logo=figma&logoColor=white)](#)
-
-[Executive Summary](EXECUTIVE_SUMMARY.md) •
-[Dashboard](dashboard/) •
-[Python Analysis](python/) •
-[Statistical Methods](docs/STATISTICAL_FORMULAS.md)
-
 </div>
 
 ---
 
 # Business Problem
 
-Leadership observed declining revenue despite relatively stable website traffic.
-
-This project investigates whether the decline was caused by traffic, conversion, customer behavior, or seasonality using Google Analytics 4 event-level data from the Google Merchandise Store.
-
-The analysis combines SQL, statistical validation, and product thinking to identify the root cause and propose a behavioral product solution.
+Revenue is declining at the Google Merchandise Store, but traffic looks stable. That mismatch is what makes this worth investigating: if sessions aren't dropping, the leak is somewhere downstream, and "somewhere downstream" isn't a diagnosis leadership can act on.
 
 ---
 
@@ -41,13 +26,13 @@ The analysis combines SQL, statistical validation, and product thinking to ident
 
 # Key Findings
 
-| Finding | Result |
-|---------|--------|
-| Revenue decline was conversion-driven | ✓ |
-| Largest funnel leak occurred before checkout | ✓ |
-| Returning users converted 5.3× better | ✓ |
-| Conversion decline was statistically significant | p = 0.00006 |
-| Desktop & Mobile followed the same seasonal trend | r = 0.81 |
+| Finding |
+|---------|
+| Revenue decline was conversion-driven |
+| Largest funnel leak occurred before checkout |
+| Returning users converted 5.3× better |
+| Conversion decline was statistically significant(p = 0.00006 ) |
+| Desktop & Mobile followed the same seasonal trend(r = 0.81) |
 
 ---
 
